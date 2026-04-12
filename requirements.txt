@@ -1,0 +1,9 @@
+# Phase 1: Data Ingestion
+# (Currently uses only Python standard library)
+
+# Phase 2 & 3: Content Enrichment
+# anthropic>=0.28.0  # For Claude API calls (uncomment for later phases)
+
+# Phase 4+: Potential future dependencies
+# google-sheets  # For Google Sheets API
+# python-dotenv  # For environment variable management

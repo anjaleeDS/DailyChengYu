@@ -1,0 +1,32 @@
+# Data files (raw, processed, reports)
+data/raw/*.txt
+data/raw/*.db
+data/processed/*.csv
+data/validation_report.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# macOS
+.DS_Store
