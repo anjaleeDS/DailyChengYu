@@ -128,7 +128,7 @@ class IdiomParser:
         return idioms
     
     def save_to_csv(self, idioms: list) -> bool:
-        """Save parsed idioms to CSV file."""
+        """Save parsed idioms to CSV file with proper quoting."""
         print(f"\nSaving to {self.processed_data_path}...")
         
         try:
@@ -137,8 +137,9 @@ class IdiomParser:
             # Include example field in output (useful but not in final target yet)
             csv_fields = self.TARGET_FIELDS
             
+            # Use QUOTE_ALL to ensure all fields are quoted for safety and readability
             with open(self.processed_data_path, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.DictWriter(f, fieldnames=csv_fields)
+                writer = csv.DictWriter(f, fieldnames=csv_fields, quoting=csv.QUOTE_ALL)
                 writer.writeheader()
                 
                 for idiom in idioms:
